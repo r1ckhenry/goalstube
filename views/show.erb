@@ -1,0 +1,11 @@
+<h1><%= @show_vid['title'] %></h1>
+
+<h4><%= @show_vid['details'] %></h4>
+
+<iframe width="420" height="315" src="<%= @show_vid['url'] %>" frameborder="0" allowfullscreen></iframe>
+
+<button><a href="/videos/<%= @show_vid['id'] %>/edit">edit</a></button>
+
+<form action="/videos/<%= @show_vid['id'] %>/delete" method="POST">
+  <button name="_method" value="delete">delete</button>
+</form>

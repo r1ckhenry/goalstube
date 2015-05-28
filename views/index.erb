@@ -1,0 +1,8 @@
+<h1>Welcome to GoalsTube</h1>
+
+<% @my_videos.each do |video| %>
+  <a href="/videos/<%= video['id'] %>">
+  <%= video['title'] %>
+  </a>
+  <%= video['details'] %>
+<% end %>
